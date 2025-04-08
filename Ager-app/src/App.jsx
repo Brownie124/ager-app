@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoadingScreen from "./pages/LoadingScreen";
-import LoginScreen from "./pages/LoginScreen";
+import LoginForm from "./pages/LoginForm";
 import Dashboard from "./pages/Dashboard";
 // Initial commit test
 
@@ -9,7 +9,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<LoadingScreen />} />
-        <Route path="/login" element={<LoginScreen />} />
+        <Route path="/login" element={<LoginForm />} />
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </Router>
@@ -17,6 +17,7 @@ function App() {
 }
 
 export default App;
+
 
 
 
