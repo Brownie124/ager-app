@@ -1,35 +1,39 @@
-import HexIcon from "../components/HexIcon";
+import './Dashboard.css';
+import logo from '../assets/logo.png';
+import { Link } from 'react-router-dom';
 
 function Dashboard() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-600 to-green-300 text-white flex flex-col items-center pt-10 px-4">
-      {/* Logo */}
-      <div className="flex flex-col items-center mb-8">
-        <img src="/vite.svg" alt="AGER logo" className="w-12 h-12 mb-2" />
-        <h1 className="text-3xl font-bold tracking-wide">AGER</h1>
+    <div className="dashboard-container">
+      
+      <div className="logo-container">
+        <img src={logo} alt="AGER logo" className="logo-icon" />
+        <h1 className="logo-text">AGER</h1>
       </div>
 
-      {/* Hex Grid */}
-      <div className="grid grid-cols-3 gap-4 mb-10">
-        <div></div>
-        <HexIcon icon="💧" bgColor="bg-blue-500" />
-        <div></div>
+      
+      <div className="hexagon-grid">
+        <Link to="/soil" className="dashboard-item water-hex">
+          <div className="icon-container">💧</div>
+        </Link>
 
-        <HexIcon icon="🚚" bgColor="bg-yellow-400" />
-        <div></div>
-        <HexIcon icon="🍅" bgColor="bg-red-500" />
+        <Link to="/delivery" className="dashboard-item delivery-hex">
+          <div className="icon-container">🚚</div>
+        </Link>
 
-        <div></div>
-        <HexIcon icon="🚜" bgColor="bg-green-800" />
-        <div></div>
+        <Link to="/waste" className="dashboard-item waste-hex">
+          <div className="icon-container">🍅</div>
+        </Link>
+
+        <Link to="/farming" className="dashboard-item farming-hex">
+          <div className="icon-container">🚜</div>
+        </Link>
       </div>
 
-      <h2 className="text-xl font-bold tracking-widest">DASHBOARD</h2>
+      
+      <h2 className="dashboard-title">DASHBOARD</h2>
     </div>
   );
 }
 
 export default Dashboard;
-
-
-  
