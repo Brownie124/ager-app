@@ -16,7 +16,6 @@ const data = [
 const SoilMonitoring = () => {
   return (
     <div className="soil-monitoring">
-      {/* Header */}
       <div className="header">
         <div className="logo-container">
           <Sprout className="logo-icon" />
@@ -25,7 +24,7 @@ const SoilMonitoring = () => {
         <h2 className="page-title">SOIL MONITORING</h2>
       </div>
 
-      {/* Soil Report Card */}
+     
       <div className="content">
         <div className="report-card">
           <h3 className="report-title">Soil Report</h3>
@@ -51,7 +50,7 @@ const SoilMonitoring = () => {
           </div>
         </div>
 
-        {/* Graph Card */}
+       
         <div className="graph-card">
           <div className="graph-container">
             <ResponsiveContainer width="100%" height="100%">
@@ -70,7 +69,7 @@ const SoilMonitoring = () => {
         </div>
       </div>
 
-      {/* Bottom Navigation */}
+      
       <div className="navigation">
         <div className="nav-container">
           <div className="nav-buttons">
